@@ -1,6 +1,6 @@
 # 校园导航演示 (Campus Navigation Demo)
 
-这是一个基于C++的控制台应用程序，旨在模拟和解决校园内的各种导航问题。该项目将校园地图抽象为一个图（Graph），并实现了一系列复杂的图算法，以提供丰富的路径规划和分析功能。
+这是一个基于C++的控制台应用程序，旨在模拟和解决校园内的各种导航问题。该项目将校园地图抽象为一个图（Graph），并实现了一系列复杂的图算法，以提供丰富的路径规划和分析功能。现新增一 Vue 前端交互界面，欢迎尝试。
 
 ## 主要功能
 
@@ -58,6 +58,13 @@ g++ main.cpp -o CampusNavigationDemo -std=c++11
 
 # 运行程序
 ./CampusNavigationDemo
+
+前端版本废弃了 main.cpp 和 map_ope.cpp，新建使用 server.cpp。
+
+终端1：编译 C++ 后端 g++ server.cpp -o ServerDemo -std=c++14 -pthread -lws2_32，然后运行 ./ServerDemo，它将在 :8080 监听。
+
+终端2：运行 Vue 3 前端 npm install，然后 npm run dev，浏览器访问输出的地址（通常是 http://localhost:5173）。
+
 ```
 
-程序启动后，将显示一个操作菜单。根据提示输入数字编号即可使用相应的功能。
+程序启动后，将显示一个操作菜单。根据提示即可使用相应的功能。
